@@ -1,23 +1,24 @@
+#include <string>
 #include <iostream>
 #include <sstream>
 #include "address.h"
 
 Address::Address(){
-	street = 1;
-	city = 1;
-	state = 1;
-	zip = 10000;
+	Address::street = "";
+	Address::city = "";
+	Address::state = "";
+	Address::zip = "";
 } // end constructor
 
-void Address::init(std::string street, city, state, zip){
-	std::stringstream converter;
-	std::string sStreet;
-	std::string sCity;
-	std::string sState;
-	std::string sZip;
-
+void Address::init(std::string street, std::string city, std::string state, std::string zip){
+	Address::street = street;
+	Address::city = city;
+	Address::state = state;
+	Address::zip = zip;
 } // end init
 
 void Address::printAddress(){
-	std::cout << street << " " << city << " " << state << " " << zip << std::endl;
+	std::cout << Address::street << std::endl;
+	std::cout << Address::city << ", " << Address::state << " " << Address::zip << std::endl;
 } // end printAddress
+
